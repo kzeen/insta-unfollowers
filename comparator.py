@@ -19,3 +19,6 @@ for element in following_list:
 
 for unfollowed in unfollowed_list:
     print(unfollowed)
+
+followers_file.close()
+following_file.close()
