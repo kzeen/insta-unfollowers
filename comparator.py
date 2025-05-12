@@ -17,8 +17,9 @@ for element in following_list:
     if element not in followers_list:
         unfollowed_list.append(element)
 
-for unfollowed in unfollowed_list:
-    print(unfollowed)
+with open("new_unfollowed.txt", "w") as f:
+    for unfollowed in unfollowed_list:
+        f.write(unfollowed + "\n\n")
 
 followers_file.close()
 following_file.close()
