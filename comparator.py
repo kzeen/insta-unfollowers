@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 followers = "followers.json"
 following = "following.json"
@@ -17,7 +18,7 @@ for element in following_list:
     if element not in followers_list:
         unfollowed_list.append(element)
 
-with open("new_unfollowed.txt", "w") as f:
+with open("unfollowed_" + datetime.today().strftime("%Y-%m-%d_%H-%M-%S") + ".txt", "w") as f:
     for unfollowed in unfollowed_list:
         f.write(unfollowed + "\n\n")
 
